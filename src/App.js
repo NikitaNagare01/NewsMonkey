@@ -9,9 +9,7 @@ import LoadingBar from 'react-top-loading-bar'
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  useActionData,
-  useAsyncValue,
+  Routes
 } from "react-router-dom";
 
 const App =()=> {
@@ -31,7 +29,7 @@ const App =()=> {
 
     return (
       <div>
-        <Router>
+        <Router  basename='/NewsMonkey'>
             <Navbar/>
 
               <LoadingBar
@@ -41,14 +39,14 @@ const App =()=> {
               />
 
               <Routes>
-               <Route exact path="/" element={<News setprogress={setprogress} apikey={apikey}  key="home" home="home" pagesize={pagesize} category="general" country="in"/>}/> 
-               <Route exact path="/business" element={<News setprogress={setprogress} apikey={apikey} key="business" pagesize={pagesize} category="business" country="in"/>}/> 
-               <Route exact path="/entertainment" element={<News setprogress={setprogress} apikey={apikey} key="entertainment" pagesize={pagesize} category="entertainment" country="in"/>}/> 
-               <Route exact path="/general" element={<News setprogress={setprogress} apikey={apikey} key="general" pagesize={pagesize} category="general" country="in"/>}/> 
-               <Route exact path="/health" element={<News setprogress={setprogress} apikey={apikey} key="health" pagesize={pagesize} category="health" country="in"/>}/> 
-               <Route exact path="/science" element={<News setprogress={setprogress} apikey={apikey} key="science" pagesize={pagesize} category="science" country="in"/>}/> 
-               <Route exact path="/sports" element={<News setprogress={setprogress} apikey={apikey} key="sports" pagesize={pagesize} category="sports" country="in"/>}/> 
-               <Route exact path="/technology" element={<News setprogress={setprogress} apikey={apikey} key="technology" pagesize={pagesize} category="technology" country="in"/>}/> 
+               <Route exact path="/NewsMonkey" element={<News setprogress={setprogress} apikey={apikey}  key="home" home="home" pagesize={pagesize} category="general" country="in"/>}/> 
+               <Route  path="/business" element={<News setprogress={setprogress} apikey={apikey} key="business" pagesize={pagesize} category="business" country="in"/>}/> 
+               <Route  path="/entertainment" element={<News setprogress={setprogress} apikey={apikey} key="entertainment" pagesize={pagesize} category="entertainment" country="in"/>}/> 
+               <Route  path="/general" element={<News setprogress={setprogress} apikey={apikey} key="general" pagesize={pagesize} category="general" country="in"/>}/> 
+               <Route  path="/health" element={<News setprogress={setprogress} apikey={apikey} key="health" pagesize={pagesize} category="health" country="in"/>}/> 
+               <Route  path="/science" element={<News setprogress={setprogress} apikey={apikey} key="science" pagesize={pagesize} category="science" country="in"/>}/> 
+               <Route  path="/sports" element={<News setprogress={setprogress} apikey={apikey} key="sports" pagesize={pagesize} category="sports" country="in"/>}/> 
+               <Route  path="/technology" element={<News setprogress={setprogress} apikey={apikey} key="technology" pagesize={pagesize} category="technology" country="in"/>}/> 
                
                 {/* <News setprogress={setprogress}/> */}
 
